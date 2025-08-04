@@ -1,5 +1,7 @@
 // only on 1-ch images!!!
+// clear ROIs in between movies
 
+run("Clear Results");
 getPixelSize(unit, pixelWidth, pixelHeight);
 
 rename("tomeasure");
