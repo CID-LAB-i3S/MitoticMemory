@@ -1,1 +1,30 @@
-Analytical codes, data visualisation and statistics for Indian muntjac mitotic stopwatch experiments.
+Data integration pipeline, analytical codes and data visualisation for mitotic stopwatch live-cell imaging experiments described in:
+
+[To Do: add Title]
+
+Goal of the pipeline is to integrate cell family tracking, mitotic outcomes and daughter cell fates from long-term microscopy assays, where mitosis is delayed by one mean or another (e.g. monastrol treatment + washout). 
+
+How to use this repository:
+
+Download and install relevant python packages
+- jupyter
+- pandas
+- numpy
+- altair
+
+Download and install relevant ImageJ plugins
+- TrackMate
+
+Important: Some user input requires MS excel tables or similar tabular structures.
+
+The code is divided into Macros (ImageJ macros) and Notebooks (Jupyter notebooks). 
+Part of the analysis pipeline requires (semi-)manual user input via ImageJ/Fiji, the other part integrates all user-generated outputs, saves meta-statistics and finalises data visualisation.
+
+1. Starting point are TrackMate result tables (generated either by manual or automated tracking of cells across generations)
+2. These will be analysed via the jupyter notebook '_Trackmate.ipynb' to generate per tracked video a new '_lineages' dataframe as well as a global summary dataframe
+3. Next, using the semi-automatic ImageJ macro 'MitoticTime', the user annotates the mitotic onset (i.e. nuclear envelope breakdown) for each splitting event (anaphase).
+4. Again in ImageJ ('MitoticErrors_All'), the user can annotate mitotic defects and segregation errors. 
+5. Next, via the Notebook '_merge_onsets.ipynb', lineage information will be merged with mitotic durations and mitotic error events.
+6. Finally, via the Notebook '_Post.ipynb', the data can be filtered in various ways (such as selecting mother cell cohorts, or excluding division with errors) and visualised using the python library altair.
+
+Please note that this repository is mainly published for documentation within the context of a series of custom experiments, and was not optimised for user-friendliness! Please feel encouraged to ask for help if needed. 
