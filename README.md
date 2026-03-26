@@ -1,6 +1,7 @@
 Data integration pipeline, analytical codes and data visualisation for mitotic stopwatch live-cell imaging experiments described in:
 
 Soares-de-Oliveira et al. (2026) Microtubule occupancy at kinetochores links checkpoint silencing with mitotic memory 
+
 bioRxiv preprint: https://doi.org/10.64898/2026.01.26.701783 
 
 Goal of the pipeline is to integrate cell family tracking, mitotic outcomes and daughter cell fates from long-term microscopy assays, where mitosis is delayed by one mean or another (e.g. monastrol treatment + washout). 
