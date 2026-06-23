@@ -14,7 +14,7 @@ The goal of this pipeline is to integrate cell family tracking, mitotic outcomes
 
 ### 1. Install dependencies
 
-Download and install the relevant Python packages (e.g. using the Anaconda + conda management system):
+Download and install the relevant Python packages (e.g. using the Anaconda + conda management system for Windows, macOS, and Linux):
 
 | Package | Version |
 |---|---|
